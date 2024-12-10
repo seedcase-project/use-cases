@@ -6,7 +6,7 @@ folder_name = input("Enter the name of the main folder for the project: ")
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
-folder_path = os.path.join(script_dir, '..', '..', folder_name, 'data_raw')
+folder_path = os.path.join(script_dir, '..', '..', folder_name, 'data-raw')
 
 file_path = os.path.join(folder_path, '.gitignore')
 

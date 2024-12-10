@@ -1,9 +1,9 @@
 import os
 import requests
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
+script_dir = os.path.dirname(os.path.abspath(__file__)) 
 
-folder_path = os.path.join(script_dir, '..', '..', 'male-seed-beetle', 'data_raw')
+folder_path = os.path.join(script_dir, '..', '..', 'male-seed-beetle', 'data-raw')
 
 file_path = os.path.join(folder_path, '.gitignore')
 
