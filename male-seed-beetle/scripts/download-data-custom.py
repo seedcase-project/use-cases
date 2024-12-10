@@ -1,7 +1,28 @@
 import os
+
 import requests
 
-# folder_name = 'male-seed-beetle'
+def download_data_custom():
+    """Downloads a data file after asking for the location of the source (url or folder).
+
+    This is the more advanced of the download data scripts. It will ask for the resource 
+    name first, then create the data-raw folder with .gitignore file if it finds that they
+    do not already exist. 
+    There shouldn't be a need to edit the script if it is copied to a new data resource.
+
+    Args:
+        url: the url for the data file entered by the user.
+        folder: the folder path for the data file entered by the user.
+
+    Returns:
+        No return as such, but a file is fetched and stored in the repo.
+
+    Raises:
+        If the user doesn't specify either a folder or a url it will abort.
+    """
+
+# folder_name = 'male-seed-beetle' For Testing Delete Later
+
 folder_name = input("Enter the name of the main folder for the project: ")
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
