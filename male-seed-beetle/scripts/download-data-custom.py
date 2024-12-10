@@ -1,8 +1,6 @@
 import os
 import requests
 
-# Either code the name in directly, or ask every time.
-
 # folder_name = 'male-seed-beetle'
 folder_name = input("Enter the name of the main folder for the project: ")
 
@@ -10,8 +8,16 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 
 folder_path = os.path.join(script_dir, '..', '..', folder_name, 'data_raw')
 
+file_path = os.path.join(folder_path, '.gitignore')
+
 if not os.path.exists(folder_path):
     os.mkdir(folder_path)
+else:
+    pass
+
+if not os.path.isfile(file_path):
+    with open(file_path, 'w') as file:
+        file.write('*')
 else:
     pass
 
@@ -26,7 +32,8 @@ if source == 'u':
         file.write(r.content)
 
 elif source == 'f':
-    folder = input("Write the full path and filename here: ") # /Users/au157729/Downloads/Beetle.txt
+    folder = input("Write the full path and filename here: ") 
+    # for testing /Users/au157729/Downloads/Beetle.txt
 
     file_path = os.path.join(folder_path, 'data.csv')
     with open(folder, 'rb') as source_file:
