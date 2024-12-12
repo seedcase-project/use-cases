@@ -7,15 +7,6 @@ import requests
 This is the most basic of the download data scripts. It requires that the url for 
 the data is provided as an argument, and it assumes that a data-raw folder 
 has been created containing a .gitignore file.
-
-Args:
-    url: the url for the data file given as an argument.
-
-Returns:
-    No return as such, but a file is fetched and saved to the relevant folder in the repo.
-
-Raises:
-    No error messages for now, but will need one if it can't find the file.
 """
 
 resource_dir = Path(__file__).resolve().parent.parent #testing male-seed-beetle returned with print(f'{script_dir}')
