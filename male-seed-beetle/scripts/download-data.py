@@ -15,7 +15,7 @@ resource_dir = Path(__file__).resolve().parent.parent
 # testing male-seed-beetle/data-raw returned with print(f'{folder_path}')
 folder_path = resource_dir / "data-raw"
 
-url = "https://zenodo.org/records/4965431/files/Expe3Abundance.csv?download=1"
+url = "https://zenodo.org/records/4932381/files/BeetleMetabolicRate_Dryad.txt?download=1"
 
 raw_data = requests.get(url, allow_redirects=True)
 

@@ -13,5 +13,4 @@ and numerical data, which makes it a good test case for the Seedcase
 software.
 
 It is not possible to download data directly from DRYAD, so we have
-downloaded the data and added it to this repository as the file
-`data.csv` manually.
+downloaded the data from Zenodo, where it is also available.
