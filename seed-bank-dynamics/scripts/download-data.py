@@ -15,7 +15,7 @@ resource_dir = Path(__file__).resolve().parent.parent
 # testing male-seed-beetle/data-raw returned with print(f'{folder_path}')
 folder_path = resource_dir / "data-raw"
 
-url = "https://datadryad.org/stash/downloads/file_stream/30903"
+url = "https://zenodo.org/records/14436735/files/COVID-19-Faelle_7-Tage-Inzidenz_Landkreise.csv?download=1"
 
 raw_data = requests.get(url, allow_redirects=True)
 
