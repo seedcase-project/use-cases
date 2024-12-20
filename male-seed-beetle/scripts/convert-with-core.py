@@ -40,9 +40,15 @@ df = df.rename(column_names)
 
 df.write_csv('../data-raw/data.csv')
 
+# Update abbreviated values to full text
+treatment_map = {"V":"Virgin", "M":"Mating"}
+
+df = df.with_columns(
+    treatment=pl.col("treatment").replace_strict(treatment_map)
+)
+df.write_csv('../data-raw/data.csv')
 
 '''
-
 "CYCLE":"FOCAL_CYCLE", 
 "O2":"02_Consumed", 
 "CO2":"C02_Produced", 
@@ -63,3 +69,4 @@ df.write_csv('../data-raw/data.csv')
 "COPULDUR_2":"Copulation_Duration_Second_Mating", 
 "ID":"ID"
 '''
+
