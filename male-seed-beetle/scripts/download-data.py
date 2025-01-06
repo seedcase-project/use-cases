@@ -19,7 +19,7 @@ url = "https://zenodo.org/records/4932381/files/BeetleMetabolicRate_Dryad.txt?do
 
 raw_data = requests.get(url, allow_redirects=True)
 
-file_path = folder_path / "data.csv"
+file_path = folder_path / "data.tsv"
 
 with open(file_path, "wb") as file:
     file.write(raw_data.content)
