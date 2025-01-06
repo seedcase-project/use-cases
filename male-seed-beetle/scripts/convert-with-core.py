@@ -10,7 +10,7 @@ with open('../data-raw/data.tsv', 'r') as tsv:
             content = re.sub("\t", ",", line) 
             csv.write(content)
 
-df = pl.read_csv('../data-raw/data1.csv')
+df = pl.read_csv('../data-raw/data-ready.csv')
 
 block_mapping = {1:"Block 1", 2:"Block 2", 3:"Block 3"}
 
@@ -21,4 +21,4 @@ df = df.rename({col: col.lower() for col in df.columns}).with_columns(
     treatment=pl.col("treatment").replace_strict(treatment_map),
     )  
 
-df.write_csv('../data-raw/data1.csv')
+df.write_csv('../data-raw/data-ready.csv')
