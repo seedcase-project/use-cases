@@ -5,12 +5,9 @@ from pathlib import Path
 #Transform from tab sep to comma sep
 with open('../data-raw/data.tsv', 'r') as tsv:
 
-    with open('../data-raw/data1.csv', 'w') as csv:
-
+    with open('../data-raw/data-ready.csv', 'w') as csv:
         for line in tsv:
-
             content = re.sub("\t", ",", line) 
-
             csv.write(content)
 
 df = pl.read_csv('../data-raw/data1.csv')
